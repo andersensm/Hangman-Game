@@ -1,5 +1,6 @@
 body {
   position: relative;
+  font-family: 'Candal', sans-serif;
 }
 header {
   border-bottom: 4px solid black;
@@ -10,21 +11,26 @@ footer {
   background-image: url("../images/redwhitecheckerbox.png");
 }
 header img, footer img {
-  width:55px;
+  width: 55px;
   height: 55px;
 }
-header h1, footer h1 {
-  font-family: 'Kalam', cursive;
+header h1 {
+  font-family: 'Candal', sans-serif;
   text-align: center;
   margin: 0 auto;
   padding: 20px;
   font-size: 50px;
   color: black;
   background-color: #F5F5F5;
-  opacity: 0.90;
 }
-main {
-  margin-bottom: 40px;
+footer h4 {
+  font-family: 'Candal', sans-serif;
+  text-align: center;
+  margin: 0 auto;
+  padding: 20px;
+  font-size: 24px;
+  color: black;
+  background-color: #F5F5F5;
 }
 main .container {
   opacity: 0.90;
