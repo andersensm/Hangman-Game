@@ -1,0 +1,46 @@
+body {
+  position: relative;
+}
+header {
+  border-bottom: 4px solid black;
+  background-image: url("../images/redwhitecheckerbox.png");
+}
+footer {
+  border-top: 4px solid black;
+  background-image: url("../images/redwhitecheckerbox.png");
+}
+header img, footer img {
+  width:55px;
+  height: 55px;
+}
+header h1, footer h1 {
+  font-family: 'Kalam', cursive;
+  text-align: center;
+  margin: 0 auto;
+  padding: 20px;
+  font-size: 50px;
+  color: black;
+  background-color: #F5F5F5;
+  opacity: 0.90;
+}
+main {
+  margin-bottom: 40px;
+}
+main .container {
+  opacity: 0.90;
+}
+main .card-header {
+  font-size: 22px;
+  background-color: #CD853F;
+}
+.UnitedStates {
+  width: 70%;
+  position: absolute;
+}
+main .card {
+  margin: 20px;
+  border: 1.5px solid black;
+}
+main .card-body {
+  background-color: #FFE4C4;
+}
