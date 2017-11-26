@@ -4,15 +4,21 @@ body {
 }
 header {
   border-bottom: 4px solid black;
-  background-image: url("../images/redwhitecheckerbox.png");
+  background-color: #FAEBD7;
 }
 footer {
   border-top: 4px solid black;
-  background-image: url("../images/redwhitecheckerbox.png");
+  background-color: #FAEBD7;
 }
 header img, footer img {
   width: 55px;
   height: 55px;
+}
+header .container {
+  background-color: #FAEBD7;
+}
+footer .container {
+  background-color: #FAEBD7;
 }
 header h1 {
   font-family: 'Candal', sans-serif;
@@ -21,7 +27,6 @@ header h1 {
   padding: 20px;
   font-size: 50px;
   color: black;
-  background-color: #F5F5F5;
 }
 footer h4 {
   font-family: 'Candal', sans-serif;
@@ -30,23 +35,31 @@ footer h4 {
   padding: 20px;
   font-size: 24px;
   color: black;
-  background-color: #F5F5F5;
+  background-color: #FAEBD7;
+}
+main {
+  background-image: url("../images/redwhitecheckerbox-2.jpg");
 }
 main .container {
-  opacity: 0.90;
+  background-image: url("../images/food-9.jpg");
+  border-left:4px solid black;
+  border-right:4px solid black;
 }
 main .card-header {
   font-size: 22px;
-  background-color: #CD853F;
+  background-color: #708090;
 }
 .UnitedStates {
   width: 70%;
   position: absolute;
 }
 main .card {
-  margin: 20px;
-  border: 1.5px solid black;
+  margin: 40px;
+  border: 2.5px solid black;
 }
 main .card-body {
-  background-color: #FFE4C4;
+  background-color: #F5F5F5;
+}
+div .card-body img {
+  max-width: 75%;
 }
