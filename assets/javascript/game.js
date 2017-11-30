@@ -52,18 +52,19 @@ var wordBank = ['Key Lime Pie',
 //Choose random words within wordBank array
 var chosenWord = wordBank[Math.floor(Math.random() * wordBank.length)];
 var lowerChosenWord = chosenWord.toLowerCase();
-var split = lowerChosenWord.split('');
-var wordCount = split.length;
+//Removes White Space between words within string and takes raw character count
+var removeWhiteSpace = lowerChosenWord.split(' ').join('');
+var letterCount = removeWhiteSpace.length;
 
+//Review in HTML DOM
 console.log(lowerChosenWord);
-console.log(wordCount);
+console.log(letterCount);
 
 //Blank Arrays
 var underScore = [];
 var userGuess = [];
 var rightGuess = [];
 var wrongGuess = [];
-
 
 //Counters
 var wins = 0;
@@ -73,8 +74,6 @@ var guessWrongMaximum = 10;
 console.log(guessWrongMaximum);
 
 console.log(underScore);
-
-
 
 //------------------------------------------------------------------------------
 //FUNCTIONS
@@ -88,6 +87,7 @@ function startGame() {
 			userGuess = [];
 			rightGuess = [];
 			wrongGuess = [];
+			rightCounter = 0;
 			guessWrongMaximum = 10;
 
 			//Create Underscore for each letter based on length of randomized words
@@ -111,6 +111,21 @@ document.onkeyup = function(event) {
 				if (lowerChosenWord.indexOf(userGuess) > -1) {
 				//Adds keystroke to rightGuess array
 				rightGuess.push(userGuess);
+				rightCounter++;
+							//Game finishes with '>0' guesses remaining and restarts with new word
+							if (rightCounter === letterCount) {
+								wins++;
+								//Push to HTML DOM
+								document.getElementById('winsTracker').innerHTML = wins;
+								//Choose random words within wordBank array
+								chosenWord = wordBank[Math.floor(Math.random() * wordBank.length)];
+								lowerChosenWord = chosenWord.toLowerCase();
+								//Removes White Space between words within string and takes raw character count
+								removeWhiteSpace = lowerChosenWord.split(" ").join("");
+								letterCount = removeWhiteSpace.length;
+								//Restart Game
+								startGame();
+							}
 				//Push to HTML DOM
 				document.getElementById('rightGuess').innerHTML = rightGuess;
 				//If not 'right' then 'wrong'
@@ -127,15 +142,15 @@ document.onkeyup = function(event) {
 								losses++;
 								//Push to HTML DOM
 								document.getElementById('lossesTracker').innerHTML = losses;
-								//Choose new random words within wordBank array for restart
+								//Choose random words within wordBank array
 								chosenWord = wordBank[Math.floor(Math.random() * wordBank.length)];
 								lowerChosenWord = chosenWord.toLowerCase();
-								split = lowerChosenWord.split('');
-								wordCount = split.length;
+								//Removes White Space between words within string and takes raw character count
+								removeWhiteSpace = lowerChosenWord.split(' ').join('');
+								letterCount = removeWhiteSpace.length;
 								//Restart Game
 								startGame();
 							}
-
 
 			}
 
@@ -146,10 +161,6 @@ document.onkeyup = function(event) {
 
 //Update the 'rightGuess'/'wrongGuess' arrays. If the user types the same keys again it shouldn't count as incorrect or correct, neight should be addded twice. It will have to check back with both guess arrays.
 
-//Add in script to compare var 'wordCount.length' vs var 'chosenWord.length' for achieving completion.
-
 //If the user completes the word, change the graphic to the image associated with the 'wordBank' array and the name within the array.
-
-		//If the word is completed before running out of guesses, wins++
 
 //If the user types the same keys again it shouldn't count as incorrect. It will have to check back with the 'guess' array.
