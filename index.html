@@ -44,7 +44,8 @@
                   <strong>Start of the Game</strong>
                 </div>
                 <div class="card-body">
-                  # of Wins, # of Losses
+                  <p># of Wins: <span id="winsTracker"></span></p>
+                  <p># of Losses: <span id="lossesTracker"></span></p>
                 </div>
               </div>
             </div>
@@ -55,8 +56,20 @@
                 <div class="card-header">
                   <strong>Current Word:</strong>
                 </div>
-                <div id="underscore"class="card-body">
-                  
+                <div class="card-body">
+                  <span id="underscore"></span>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-xs-12">
+              <div class="card">
+                <div class="card-header">
+                  <strong>Correct Guess</strong>
+                </div>
+                <div class="card-body">
+                  <span id="rightGuess"></span>
                 </div>
               </div>
             </div>
@@ -68,7 +81,7 @@
                   <strong>Number of Guesses Remaining:</strong>
                 </div>
                 <div class="card-body">
-                  -X Example
+                  <span id="guessWrongMaximum"></span>
                 </div>
               </div>
             </div>
@@ -77,10 +90,10 @@
             <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-xs-12">
               <div class="card">
                 <div class="card-header">
-                  <strong>Letters Already Guessed:</strong>
+                  <p>Letters Already Guessed: </p>
                 </div>
                 <div class="card-body">
-                  X Remaining
+                  <span id="wrongGuess"></span>
                 </div>
               </div>
             </div>
