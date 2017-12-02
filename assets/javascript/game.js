@@ -20,7 +20,7 @@ var wordBank = ['KeyLimePie',
 	'CaliforniaRoll',
 	'Meatloaf',
 	'Grits',
-	'MacaroniNcheese',
+	'MacaroniNCheese',
 	'MarylandCrabcakes',
 	'PotatoChips',
 	'FortuneCookies',
@@ -38,7 +38,7 @@ var wordBank = ['KeyLimePie',
 	'PoBoy',
 	'GreenChileStew',
 	'ChocolateChipCookies',
-	'BlueberryCobbler',
+	'BlueBerryCobbler',
 	'ChicagoStylePizza',
 	'Nachos',
 	'PhillyCheeseSteak',
@@ -66,7 +66,6 @@ console.log(letterCount);
 //Blank Arrays
 var underScore = [];
 var userGuess = [];
-var rightGuess = [];
 var wrongGuess = [];
 
 //Counters
@@ -83,9 +82,10 @@ console.log(underScore);
 //-----------------------------------------------------------------------------
 
 function defaultVariables() {
+	alphabet = ['a','b','c','d','e','f','g','h','i','j','k','l','m','n','o','p','q','r','s','t','u','v','w','x',
+	'y','z'];
 	underScore = [];
 	userGuess = [];
-	rightGuess = [];
 	wrongGuess = [];
 	rightCounter = 0;
 	guessWrongMaximum = 10;
@@ -102,19 +102,33 @@ function underscore() {
 
 function defaultHtmlDom() {
 	//Push default settings to HTML DOM
-	document.getElementById('rightGuess').innerHTML = rightGuess;
 	document.getElementById('wrongGuess').innerHTML = wrongGuess;
 	document.getElementById('guessWrongMaximum').innerHTML = guessWrongMaximum;
+}
+function winGraphic() {
+
+	//Insert Image and Words for particular word
+	var picturename = "<strong> Delicious " + chosenWord + "! </strong>"
+
+	var img = "<img src="+'"assets/images/' + lowerChosenWord  + ".jpg'" + " alt=" + chosenWord + ">"
+
+
+	document.getElementById('pictitle').innerHTML = picturename;
+
+	/*
+	document.getElementById('winimage').src = "assets/images/BLT.jpg";
+	*/
+
 }
 
 function winCase (){
 	//Game finishes with '>0' guesses remaining and restarts with new word
 	if (rightCounter === letterCount) {
+		winGraphic();
 		wins++;
 		//Push to HTML DOM
 		document.getElementById('winsTracker').innerHTML = wins;
 		//Clearns console, to review new randomized word selection
-		console.clear();
 		//Choose random words within wordBank array & Lowercase the letters
 		chosenWord = wordBank[Math.floor(Math.random() * wordBank.length)];
 		lowerChosenWord = chosenWord.toLowerCase();
@@ -134,7 +148,6 @@ function loseCase () {
 		//Push to HTML DOM
 		document.getElementById('lossesTracker').innerHTML = losses;
 		//Clearns console, to review new randomized word selection
-		console.clear();
 		//Choose random words within wordBank array & Lowercase the letters
 		chosenWord = wordBank[Math.floor(Math.random() * wordBank.length)];
 		lowerChosenWord = chosenWord.toLowerCase();
