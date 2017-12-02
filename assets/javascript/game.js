@@ -116,7 +116,12 @@ function winGraphic() {
 	document.getElementById('pictitle').innerHTML = picturename;
 
 	/*
-	document.getElementById('winimage').src = "assets/images/BLT.jpg";
+	document.getElementById('winimage').src = img
+	making
+
+	Option1: google:  convert string to html
+	Option2: try creating objects
+
 	*/
 
 }
@@ -163,41 +168,41 @@ function loseCase () {
 function onKeyEvent() {
 	document.onkeyup = function(event) {
 
-					//userGuess will store keycode used
-					var userGuess = event.key;
-
+			//userGuess will store keycode used
+			var userGuess = event.key;
+					//For loop to go through the alphabet array, based on the key event that is chosen
 					for(var i= 0; i < alphabet.length; i++) {
+							//If the keystroke is equal to the userGuess and is a key within the alphabet array, it will delete the word from the alphabet array
+							if(userGuess === alphabet[i]) {
+									//variable for the alphabetSplice
+									var alphabetSplice = alphabet.splice(i,1);
 
-					if(userGuess === alphabet[i]) {
+									//Looks in lowercaseChosennWord index for keystroke
+									if (lowerChosenWord.indexOf(userGuess) > -1) {
+											//When the lower case chosen word has a valid letter that is chosen it will cycle through all the letters within the word until all are populated
+											for (var i = 0; i < letterCount; i++) {
+														//
+														if (lowerChosenWord[i] === userGuess) {
+																rightCounter++;
+																//Updates the underScore array location with the userGuess
+																underScore[i] = userGuess;
+																//Updates HTML file with the new key(s) that were used
+																document.getElementById('underscore').innerHTML = underScore.join(' ');
+																//winCase function goes into effect
+																winCase();
+														}
 
-					var alphabetSplice = alphabet.splice(i,1);
-
-
-
-					//Looks in lowercaseChosennWord index for keystroke
-					if (lowerChosenWord.indexOf(userGuess) > -1) {
-
-						for (var i = 0; i < letterCount; i++) {
-
-								if (lowerChosenWord[i] === userGuess) {
-									rightCounter++;
-									underScore[i] = userGuess;
-									document.getElementById('underscore').innerHTML = underScore.join(' ');
-									winCase();
-								}
-
-				  }
-				}
-					//If not 'right' then 'wrong'
-					else {
-										wrongGuess.push(userGuess);
-										//Push to HTML DOM
-										document.getElementById('wrongGuess').innerHTML = wrongGuess;
-										guessWrongMaximum--;
-										//Push to HTML DOM
-										document.getElementById('guessWrongMaximum').innerHTML = guessWrongMaximum;
-										loseCase();
-				  		}
+				  						}
+									//key into the wrongGuess
+									} else {
+											wrongGuess.push(userGuess);
+											//Push to HTML DOM
+											document.getElementById('wrongGuess').innerHTML = wrongGuess;
+											guessWrongMaximum--;
+											//Push to HTML DOM
+											document.getElementById('guessWrongMaximum').innerHTML = guessWrongMaximum;
+											loseCase();
+					  		}
 	}
 }
 }
@@ -214,4 +219,5 @@ function startGame() {
 			onKeyEvent();
 }
 
+//Calls the beginning of the game-----------------------------------------------
 startGame();
