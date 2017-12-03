@@ -39,6 +39,7 @@ footer h4 {
 }
 main {
   background-image: url("../images/redwhitecheckerbox-2.jpg");
+  background-repeat: repeat;
 }
 main .container {
   background-image: url("../images/food-9.jpg");
