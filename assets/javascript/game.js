@@ -6,7 +6,8 @@
 //Array of different staple foods of USA //
 var wordBank = ['KeyLimePie',
 	'Tatertots',
-	'Sourdoughbread',
+	'SourdoughBread']
+	/*
 	'CobbSalad',
 	'PotRoast',
 	'Twinkies',
@@ -48,6 +49,13 @@ var wordBank = ['KeyLimePie',
 	'BeefTacos',
 	'ReubenSandwich'
 ]
+*/
+
+
+var keylimepie = 'KeyLimePie';
+var tatertots = 'Tatertots';
+var sourdough = 'SourdoughBread';
+
 
 var alphabet = ['a','b','c','d','e','f','g','h','i','j','k','l','m','n','o','p','q','r','s','t','u','v','w','x',
 'y','z'];
@@ -89,6 +97,12 @@ function defaultVariables() {
 	wrongGuess = [];
 	rightCounter = 0;
 	guessWrongMaximum = 10;
+	var picturename = "<strong>H-A-N-G-M-A-N</strong>"
+	document.getElementById('pictitle').innerHTML = picturename;
+	document.getElementById('pictitle').style.color = "";
+	document.getElementById('pictitle').style.background = "";
+	document.getElementById("winimg").src="./assets/images/Hangman.jpg"
+
 }
 
 function underscore() {
@@ -105,25 +119,21 @@ function defaultHtmlDom() {
 	document.getElementById('wrongGuess').innerHTML = wrongGuess;
 	document.getElementById('guessWrongMaximum').innerHTML = guessWrongMaximum;
 }
-function winGraphic() {
 
+function winGraphic() {
 	//Insert Image and Words for particular word
 	var picturename = "<strong> Delicious " + chosenWord + "! </strong>"
-
-	var img = "<img src="+'"assets/images/' + lowerChosenWord  + ".jpg'" + " alt=" + chosenWord + ">"
-
-
 	document.getElementById('pictitle').innerHTML = picturename;
+	document.getElementById('pictitle').style.color = "white";
+	document.getElementById('pictitle').style.background = "green";
 
-	/*
-	document.getElementById('winimage').src = img
-	making
-
-	Option1: google:  convert string to html
-	Option2: try creating objects
-
-	*/
-
+	if (chosenWord === sourdough) {
+	document.getElementById("winimg").src="./assets/images/SourdoughBread.jpg"
+} else if (chosenWord === tatertots) {
+	document.getElementById("winimg").src="./assets/images/TaterTots.jpg"
+} else if (chosenWord === keylimepie) {
+	document.getElementById("winimg").src="./assets/images/KeyLimePie.jpg"
+}
 }
 
 function winCase (){
@@ -133,7 +143,6 @@ function winCase (){
 		wins++;
 		//Push to HTML DOM
 		document.getElementById('winsTracker').innerHTML = wins;
-		//Clearns console, to review new randomized word selection
 		//Choose random words within wordBank array & Lowercase the letters
 		chosenWord = wordBank[Math.floor(Math.random() * wordBank.length)];
 		lowerChosenWord = chosenWord.toLowerCase();
@@ -141,18 +150,23 @@ function winCase (){
 		//Takes raw character count
 		letterCount = split.length;
 		console.log(lowerChosenWord);
+		alert("Press any key to restart!!");
 		//Restart Game
-		startGame();
+		document.onkeyup = function(event) {
+
+				//userGuess will store keycode used
+				var userGuess = event.key;
+				startGame();
+}
 }
 }
 
 function loseCase () {
 	//Game finishes with '0' guesses remaining and restarts
-	if (guessWrongMaximum == 0) {
+	if (guessWrongMaximum === 0) {
 		losses++;
 		//Push to HTML DOM
 		document.getElementById('lossesTracker').innerHTML = losses;
-		//Clearns console, to review new randomized word selection
 		//Choose random words within wordBank array & Lowercase the letters
 		chosenWord = wordBank[Math.floor(Math.random() * wordBank.length)];
 		lowerChosenWord = chosenWord.toLowerCase();
@@ -161,9 +175,11 @@ function loseCase () {
 		letterCount = split.length;
 		console.log(lowerChosenWord);
 		//Restart Game
-		startGame();
 }
 }
+
+
+//Add function to if/else statement for userGuess from below (lines 182-207  )
 
 function onKeyEvent() {
 	document.onkeyup = function(event) {
