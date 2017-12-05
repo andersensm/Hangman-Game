@@ -49,14 +49,16 @@ var wordBank = ['KeyLimePie',
 	'ReubenSandwich'
 ]
 
+//alphabet Array
 var alphabet = ['a','b','c','d','e','f','g','h','i','j','k','l','m','n','o','p','q','r','s','t','u','v','w','x',
 'y','z'];
 
 //Choose random words within wordBank array & Lowercase the letters
 var chosenWord = wordBank[Math.floor(Math.random() * wordBank.length)];
 var lowerChosenWord = chosenWord.toLowerCase();
+//Seperates chosen word string into a set substrings
 var split = lowerChosenWord.split('');
-//Takes raw character count
+//Takes length of split
 var letterCount = split.length;
 
 //Review in HTML DOM
@@ -73,15 +75,17 @@ var wins = 0;
 var losses = 0;
 var guessWrongMaximum = 10;
 
+//Review in HTML DOM
 console.log(guessWrongMaximum);
-
 console.log(underScore);
 
 //------------------------------------------------------------------------------
 //FUNCTIONS
 //-----------------------------------------------------------------------------
 
+
 function defaultVariables() {
+	//When new word function is initiated the below defaults are pushed to the HTML DOM
 	alphabet = ['a','b','c','d','e','f','g','h','i','j','k','l','m','n','o','p','q','r','s','t','u','v','w','x',
 	'y','z'];
 	underScore = [];
@@ -98,11 +102,11 @@ function defaultVariables() {
 }
 
 function underscore() {
-	//Create underscore for each letter based on length of randomized word
+	//Create underscore in for each letter based on length of randomized word
 	for (var i = 0; i < lowerChosenWord.length; i++) {
 					underScore.push('_');
 				}
-				//Removes the commas within the underScore array and replaces with white space
+				//Removes the commas within the underScore array and replaces with white space and places into HTML DOM
 				document.getElementById('underscore').innerHTML = underScore.join(' ');
 }
 
@@ -113,13 +117,13 @@ function defaultHtmlDom() {
 }
 
 function winGraphic() {
-	//Inset Words & styles for particular word win
+	//Insert words & styles for particular word loss to HTML DOM
 	var picturename = "<strong> Delicious " + chosenWord + "! </strong>"
 	document.getElementById('pictitle').innerHTML = picturename;
 	document.getElementById('pictitle').style.color = "white";
 	document.getElementById('pictitle').style.background = "green";
 
-	//Graphic inserted into HTML DOM if chosenWord = any of the strings below
+	//Graphic inserted into HTML DOM if chosenWord = any of the strings below are true
 	if (chosenWord === 'ApplePie') {
 		document.getElementById("winimg").src="./assets/images/ApplePie.jpg"
 	}else if (chosenWord === 'BakedBeans') {
@@ -210,13 +214,13 @@ function winGraphic() {
 }
 
 function loseGraphic() {
-	//Inset Words & styles for particular word loss
+	//Insert words & styles for particular word loss to HTML DOM
 	var picturename = "<strong> You were almost able to eat " + chosenWord + "! </strong>"
 	document.getElementById('pictitle').innerHTML = picturename;
 	document.getElementById('pictitle').style.color = "white";
 	document.getElementById('pictitle').style.background = "red";
 
-	//Graphic inserted into HTML DOM if chosenWord = any of the strings below
+	//Graphic inserted into HTML DOM if chosenWord = any of the strings below are true
 	if (chosenWord === 'ApplePie') {
 		document.getElementById("winimg").src="./assets/images/ApplePie.jpg"
 	}else if (chosenWord === 'BakedBeans') {
@@ -309,23 +313,30 @@ function loseGraphic() {
 function winCase (){
 	//Game finishes with '>0' guesses remaining and restarts with new word
 	if (rightCounter === letterCount) {
+		//Runs winGraphic Function
 		winGraphic();
+		//Adds additonal win
 		wins++;
-		//Push to HTML DOM
+		//Pushes wins and alert to HTML DOM
 		document.getElementById('winsTracker').innerHTML = wins;
 		alert("Press any key to continue!!");
-		//Choose random words within wordBank array & Lowercase the letters
+		//Once the win statement is initiated, chooses a new random word within wordBank array
 		chosenWord = wordBank[Math.floor(Math.random() * wordBank.length)];
 		lowerChosenWord = chosenWord.toLowerCase();
+		//Seperates chosen word string into a set substrings
 		split = lowerChosenWord.split('');
-		//Takes raw character count for chosen word
+		//Takes length of split
 		letterCount = split.length;
+		//Console Log new randomized word for testing
 		console.log(lowerChosenWord);
+		//Runs key stroke function to restart game
 		document.onkeyup = function(event) {
 
 				//key press will begin new game
 				var userGuess = event.key;
+				//keystroke adds alert to HTML DOM
 				alert("Press any key to restart!!");
+				//startGame function is initiated
 				startGame();
 
 }
@@ -335,24 +346,30 @@ function winCase (){
 function loseCase () {
 	//Game finishes with '0' guesses remaining
 	if (guessWrongMaximum === 0) {
+		//Runs loseGraphic Function
 		loseGraphic();
+		//Adds additonal loss
 		losses++;
-		//Push to HTML DOM
+		//Pushes losses and alert to HTML DOM
 		document.getElementById('lossesTracker').innerHTML = losses;
 		alert("Good try, press any key to continue!!");
-		//Choose random words within wordBank array & Lowercase the letters
+		//Once the lose statement is initiated, chooses a new random word within wordBank array
 		chosenWord = wordBank[Math.floor(Math.random() * wordBank.length)];
 		lowerChosenWord = chosenWord.toLowerCase();
+		//Seperates chosen word string into a set substrings
 		split = lowerChosenWord.split('');
-		//Takes raw character count for chosen word
+		//Takes length of split
 		letterCount = split.length;
+		//Console Log new randomized word for testing
 		console.log(lowerChosenWord);
-		//Restart Game
+		//Runs key stroke function to restart game
 		document.onkeyup = function(event) {
 
 				//key press will begin new game
 				var userGuess = event.key;
+				//keystroke adds alert to HTML DOM
 				alert("Press any key to restart!!");
+				//startGame function is initiated
 				startGame();
 }
 }
@@ -361,26 +378,25 @@ function loseCase () {
 function onKeyEvent() {
 	document.onkeyup = function(event) {
 
-			//userGuess will store keycode used
+			//userGuess variable will store keycode used
 			var userGuess = event.key;
 					//For loop to go through the alphabet array, based on the key event that is chosen
 					for(var i= 0; i < alphabet.length; i++) {
 							//If the keystroke is equal to the userGuess and is a key within the alphabet array, it will delete the word from the alphabet array
 							if(userGuess === alphabet[i]) {
-									//variable for the alphabetSplice
+									//variable to to hold the spliced alphabet array
 									var alphabetSplice = alphabet.splice(i,1);
 
-									//Looks in lowercaseChosennWord index for keystroke
+									//Looks in lowerChosenWord index for keystroke
 									if (lowerChosenWord.indexOf(userGuess) > -1) {
-											//When the lower case chosen word has a valid letter that is chosen it will cycle through all the letters within the word until all are populated
+											//When the lowerChosenWord has a valid letter that is chosen it will cycle through all the letters within the underscore array word until all are populated
 											for (var i = 0; i < letterCount; i++) {
-														//
 														if (lowerChosenWord[i] === userGuess) {
 																//Right Counter is increased by 1, tracking correct keystrokes used
 																rightCounter++;
-																//Updates the underScore array with the userGuess-keystroke
+																//Updates the underScore array in the HTML DOM with the userGuess-keystroke
 																underScore[i] = userGuess;
-																//Updates HTML file with the new key(s) that were used
+																//Updates HTML DOM removing commas between letters within the underscore array
 																document.getElementById('underscore').innerHTML = underScore.join(' ');
 																//winCase function goes into effect
 																winCase();
@@ -396,6 +412,7 @@ function onKeyEvent() {
 											guessWrongMaximum--;
 											//Push to HTML DOM
 											document.getElementById('guessWrongMaximum').innerHTML = guessWrongMaximum;
+											//loseCase function goes into effect
 											loseCase();
 					  		}
 	}
@@ -404,13 +421,13 @@ function onKeyEvent() {
 }
 
 function startGame() {
-			//Default settings for variables
+			//Default settings for variables, push to HTML DOM
 			defaultVariables();
-			//Create Underscore for each letter based on length of randomized words
+			//Create Underscore for each letter based on length of randomized word
 			underscore();
 			//Push default settings to HTML DOM
 			defaultHtmlDom();
-			//Any letter will initiate below script
+			//Any keystroke letter will initiate below function
 			onKeyEvent();
 
 }
