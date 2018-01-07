@@ -81,8 +81,98 @@ console.log(underScore);
 
 //------------------------------------------------------------------------------
 //FUNCTIONS
-//-----------------------------------------------------------------------------
+//------------------------------------------------------------------------------
 
+function graphic() {
+	//Graphic inserted into HTML DOM if chosenWord = any of the strings below are true
+	if (chosenWord === 'ApplePie') {
+		document.getElementById("winimg").src="./assets/images/ApplePie.jpg"
+	}else if (chosenWord === 'BakedBeans') {
+		document.getElementById("winimg").src="./assets/images/BakedBeans.jpg"
+	}else if (chosenWord === 'BananaSplit') {
+		document.getElementById("winimg").src="./assets/images/BananaSplit.jpg"
+	}else if (chosenWord === 'BarbecueRibs') {
+		document.getElementById("winimg").src="./assets/images/BarbecueRibs.jpg"
+	}else if (chosenWord === 'BeefTacos') {
+		document.getElementById("winimg").src="./assets/images/BeefTacos.jpg"
+	}else if (chosenWord === 'BiscuitsNgravy') {
+		document.getElementById("winimg").src="./assets/images/Biscuits&gravy.jpg"
+	}else if (chosenWord === 'BLT') {
+		document.getElementById("winimg").src="./assets/images/Blt.jpg"
+	}else if (chosenWord === 'BlueBerryCobbler') {
+		document.getElementById("winimg").src="./assets/images/BlueberryCobler.jpg"
+	}else if (chosenWord === 'BuffaloWings') {
+		document.getElementById("winimg").src="./assets/images/BuffaloWings.jpg"
+	}else if (chosenWord === 'CaliforniaRoll') {
+		document.getElementById("winimg").src="./assets/images/CaliforniaRoll.jpg"
+	}else if (chosenWord === 'CheeseBurger') {
+		document.getElementById("winimg").src="./assets/images/CheeseBurger.jpg"
+	}else if (chosenWord === 'ChicagoStylePizza') {
+		document.getElementById("winimg").src="./assets/images/ChicagoStylePizza.jpg"
+	}else if (chosenWord === 'ChocolateChipCookies') {
+		document.getElementById("winimg").src="./assets/images/ChocolateChipCookies.jpg"
+	}else if (chosenWord === 'CobbSalad') {
+		document.getElementById("winimg").src="./assets/images/CobbSalad.jpg"
+	}else if (chosenWord === 'Cornbread') {
+		document.getElementById("winimg").src="./assets/images/Cornbread.jpg"
+	}else if (chosenWord === 'Fajitas') {
+		document.getElementById("winimg").src="./assets/images/Fajitas.jpg"
+	}else if (chosenWord === 'FortuneCookies') {
+		document.getElementById("winimg").src="./assets/images/FortuneCookies.jpg"
+	}else if (chosenWord === 'FrenchFries') {
+		document.getElementById("winimg").src="./assets/images/FrenchFries.jpg"
+	}else if (chosenWord === 'FriedChickenNWaffles') {
+		document.getElementById("winimg").src="./assets/images/FriedChicken&waffles.jpg"
+	}else if (chosenWord === 'GreenChileStew') {
+		document.getElementById("winimg").src="./assets/images/GreenChileStew.jpg"
+	}else if (chosenWord === 'Grits') {
+		document.getElementById("winimg").src="./assets/images/Grits.jpg"
+	}else if (chosenWord === 'HoneyHam') {
+		document.getElementById("winimg").src="./assets/images/HoneyHam.jpg"
+	}else if (chosenWord === 'HotDogs') {
+		document.getElementById("winimg").src="./assets/images/HotDogs.jpg"
+	}else if (chosenWord === 'Jambalaya') {
+		document.getElementById("winimg").src="./assets/images/Jambalaya.jpg"
+	}else if (chosenWord === 'Jerky') {
+		document.getElementById("winimg").src="./assets/images/Jerky.jpg"
+	}else if (chosenWord === 'KeyLimePie') {
+		document.getElementById("winimg").src="./assets/images/KeyLimePie.jpg"
+	}else if (chosenWord === 'LobsterRolls') {
+		document.getElementById("winimg").src="./assets/images/LobsterRolls.jpg"
+	}else if (chosenWord === 'MacaroniNCheese') {
+		document.getElementById("winimg").src="./assets/images/Macaroni&cheese.jpg"
+	}else if (chosenWord === 'MarylandCrabcakes') {
+		document.getElementById("winimg").src="./assets/images/MarylandCrabcakes.jpg"
+	}else if (chosenWord === 'Meatloaf') {
+		document.getElementById("winimg").src="./assets/images/Meatloaf.jpg"
+	}else if (chosenWord === 'Nachos') {
+		document.getElementById("winimg").src="./assets/images/Nachos.jpg"
+	}else if (chosenWord === 'NewEnglandClamChowder') {
+		document.getElementById("winimg").src="./assets/images/NewEnglandClamChowder.jpg"
+	}else if (chosenWord === 'PeanutButterSandwich') {
+		document.getElementById("winimg").src="./assets/images/PeanutButterSandwich.jpg"
+	}else if (chosenWord === 'PhillyCheeseSteak') {
+		document.getElementById("winimg").src="./assets/images/PhillyCheeseSteak.jpg"
+	}else if (chosenWord === 'PoBoy') {
+		document.getElementById("winimg").src="./assets/images/PoBoy.jpg"
+	}else if (chosenWord === 'Popcorn') {
+		document.getElementById("winimg").src="./assets/images/Popcorn.jpg"
+	}else if (chosenWord === 'PotatoChips') {
+		document.getElementById("winimg").src="./assets/images/PotatoChips.jpg"
+	}else if (chosenWord === 'PotRoast') {
+		document.getElementById("winimg").src="./assets/images/PotRoast.jpg"
+	}else if (chosenWord === 'ReubenSandwich') {
+		document.getElementById("winimg").src="./assets/images/ReubenSandwich.jpg"
+	}else if (chosenWord === 'Smores') {
+		document.getElementById("winimg").src="./assets/images/Smores.jpg"
+	}else if (chosenWord === 'SourdoughBread') {
+		document.getElementById("winimg").src="./assets/images/SourdoughBread.jpg"
+	}else if (chosenWord === 'Tatertots') {
+		document.getElementById("winimg").src="./assets/images/TaterTots.jpg"
+	}else if (chosenWord === 'Twinkies') {
+		document.getElementById("winimg").src="./assets/images/Twinkies.jpg"
+	}
+}
 
 function defaultVariables() {
 	//When new word function is initiated the below defaults are pushed to the HTML DOM
@@ -98,7 +188,6 @@ function defaultVariables() {
 	document.getElementById('pictitle').style.color = "";
 	document.getElementById('pictitle').style.background = "";
 	document.getElementById("winimg").src="./assets/images/Hangman.jpg"
-
 }
 
 function underscore() {
@@ -122,95 +211,7 @@ function winGraphic() {
 	document.getElementById('pictitle').innerHTML = picturename;
 	document.getElementById('pictitle').style.color = "white";
 	document.getElementById('pictitle').style.background = "green";
-
-	//Graphic inserted into HTML DOM if chosenWord = any of the strings below are true
-	if (chosenWord === 'ApplePie') {
-		document.getElementById("winimg").src="./assets/images/ApplePie.jpg"
-	}else if (chosenWord === 'BakedBeans') {
-		document.getElementById("winimg").src="./assets/images/BakedBeans.jpg"
-	}else if (chosenWord === 'BananaSplit') {
-		document.getElementById("winimg").src="./assets/images/BananaSplit.jpg"
-	}else if (chosenWord === 'BarbecueRibs') {
-		document.getElementById("winimg").src="./assets/images/BarbecueRibs.jpg"
-	}else if (chosenWord === 'BeefTacos') {
-		document.getElementById("winimg").src="./assets/images/BeefTacos.jpg"
-	}else if (chosenWord === 'BiscuitsNgravy') {
-		document.getElementById("winimg").src="./assets/images/Biscuits&gravy.jpg"
-	}else if (chosenWord === 'BLT') {
-		document.getElementById("winimg").src="./assets/images/Blt.jpg"
-	}else if (chosenWord === 'BlueBerryCobbler') {
-		document.getElementById("winimg").src="./assets/images/BlueberryCobbler.jpg"
-	}else if (chosenWord === 'BuffaloWings') {
-		document.getElementById("winimg").src="./assets/images/BuffaloWings.jpg"
-	}else if (chosenWord === 'CaliforniaRoll') {
-		document.getElementById("winimg").src="./assets/images/CaliforniaRoll.jpg"
-	}else if (chosenWord === 'CheeseBurger') {
-		document.getElementById("winimg").src="./assets/images/CheeseBurger.jpg"
-	}else if (chosenWord === 'ChicagoStylePizza') {
-		document.getElementById("winimg").src="./assets/images/ChicagoStylePizza.jpg"
-	}else if (chosenWord === 'ChocolateChipCookies') {
-		document.getElementById("winimg").src="./assets/images/ChocolateChipCookies.jpg"
-	}else if (chosenWord === 'CobbSalad') {
-		document.getElementById("winimg").src="./assets/images/CobbSalad.jpg"
-	}else if (chosenWord === 'Cornbread') {
-		document.getElementById("winimg").src="./assets/images/Cornbread.jpg"
-	}else if (chosenWord === 'Fajitas') {
-		document.getElementById("winimg").src="./assets/images/Fajitas.jpg"
-	}else if (chosenWord === 'FortuneCookies') {
-		document.getElementById("winimg").src="./assets/images/FortuneCookies.jpg"
-	}else if (chosenWord === 'FrenchFries') {
-		document.getElementById("winimg").src="./assets/images/FrenchFries.jpg"
-	}else if (chosenWord === 'FriedChickenNWaffles') {
-		document.getElementById("winimg").src="./assets/images/FriedChicken&waffles.jpg"
-	}else if (chosenWord === 'GreenChileStew') {
-		document.getElementById("winimg").src="./assets/images/GreenChileStew.jpg"
-	}else if (chosenWord === 'Grits') {
-		document.getElementById("winimg").src="./assets/images/Grits.jpg"
-	}else if (chosenWord === 'HoneyHam') {
-		document.getElementById("winimg").src="./assets/images/HoneyHam.jpg"
-	}else if (chosenWord === 'HotDogs') {
-		document.getElementById("winimg").src="./assets/images/HotDogs.jpg"
-	}else if (chosenWord === 'Jambalaya') {
-		document.getElementById("winimg").src="./assets/images/Jambalaya.jpg"
-	}else if (chosenWord === 'Jerky') {
-		document.getElementById("winimg").src="./assets/images/Jerky.jpg"
-	}else if (chosenWord === 'KeyLimePie') {
-		document.getElementById("winimg").src="./assets/images/KeyLimePie.jpg"
-	}else if (chosenWord === 'LobsterRolls') {
-		document.getElementById("winimg").src="./assets/images/LobsterRolls.jpg"
-	}else if (chosenWord === 'MacaroniNCheese') {
-		document.getElementById("winimg").src="./assets/images/Macaroni&cheese.jpg"
-	}else if (chosenWord === 'MarylandCrabcakes') {
-		document.getElementById("winimg").src="./assets/images/MarylandCrabcakes.jpg"
-	}else if (chosenWord === 'Meatloaf') {
-		document.getElementById("winimg").src="./assets/images/Meatloaf.jpg"
-	}else if (chosenWord === 'Nachos') {
-		document.getElementById("winimg").src="./assets/images/Nachos.jpg"
-	}else if (chosenWord === 'NewEnglandClamChowder') {
-		document.getElementById("winimg").src="./assets/images/NewEnglandClamChowder.jpg"
-	}else if (chosenWord === 'PeanutButterSandwich') {
-		document.getElementById("winimg").src="./assets/images/PeanutButterSandwich.jpg"
-	}else if (chosenWord === 'PhillyCheeseSteak') {
-		document.getElementById("winimg").src="./assets/images/PhillyCheeseSteak.jpg"
-	}else if (chosenWord === 'PoBoy') {
-		document.getElementById("winimg").src="./assets/images/PoBoy.jpg"
-	}else if (chosenWord === 'Popcorn') {
-		document.getElementById("winimg").src="./assets/images/Popcorn.jpg"
-	}else if (chosenWord === 'PotatoChips') {
-		document.getElementById("winimg").src="./assets/images/PotatoChips.jpg"
-	}else if (chosenWord === 'PotRoast') {
-		document.getElementById("winimg").src="./assets/images/PotRoast.jpg"
-	}else if (chosenWord === 'ReubenSandwich') {
-		document.getElementById("winimg").src="./assets/images/ReubenSandwich.jpg"
-	}else if (chosenWord === 'Smores') {
-		document.getElementById("winimg").src="./assets/images/Smores.jpg"
-	}else if (chosenWord === 'SourdoughBread') {
-		document.getElementById("winimg").src="./assets/images/SourdoughBread.jpg"
-	}else if (chosenWord === 'Tatertots') {
-		document.getElementById("winimg").src="./assets/images/TaterTots.jpg"
-	}else if (chosenWord === 'Twinkies') {
-		document.getElementById("winimg").src="./assets/images/Twinkies.jpg"
-	}
+	graphic();
 }
 
 function loseGraphic() {
@@ -219,96 +220,8 @@ function loseGraphic() {
 	document.getElementById('pictitle').innerHTML = picturename;
 	document.getElementById('pictitle').style.color = "white";
 	document.getElementById('pictitle').style.background = "red";
-
-	//Graphic inserted into HTML DOM if chosenWord = any of the strings below are true
-	if (chosenWord === 'ApplePie') {
-		document.getElementById("winimg").src="./assets/images/ApplePie.jpg"
-	}else if (chosenWord === 'BakedBeans') {
-		document.getElementById("winimg").src="./assets/images/BakedBeans.jpg"
-	}else if (chosenWord === 'BananaSplit') {
-		document.getElementById("winimg").src="./assets/images/BananaSplit.jpg"
-	}else if (chosenWord === 'BarbecueRibs') {
-		document.getElementById("winimg").src="./assets/images/BarbecueRibs.jpg"
-	}else if (chosenWord === 'BeefTacos') {
-		document.getElementById("winimg").src="./assets/images/BeefTacos.jpg"
-	}else if (chosenWord === 'BiscuitsNgravy') {
-		document.getElementById("winimg").src="./assets/images/Biscuits&gravy.jpg"
-	}else if (chosenWord === 'BLT') {
-		document.getElementById("winimg").src="./assets/images/Blt.jpg"
-	}else if (chosenWord === 'BlueBerryCobbler') {
-		document.getElementById("winimg").src="./assets/images/BlueberryCobbler.jpg"
-	}else if (chosenWord === 'BuffaloWings') {
-		document.getElementById("winimg").src="./assets/images/BuffaloWings.jpg"
-	}else if (chosenWord === 'CaliforniaRoll') {
-		document.getElementById("winimg").src="./assets/images/CaliforniaRoll.jpg"
-	}else if (chosenWord === 'CheeseBurger') {
-		document.getElementById("winimg").src="./assets/images/CheeseBurger.jpg"
-	}else if (chosenWord === 'ChicagoStylePizza') {
-		document.getElementById("winimg").src="./assets/images/ChicagoStylePizza.jpg"
-	}else if (chosenWord === 'ChocolateChipCookies') {
-		document.getElementById("winimg").src="./assets/images/ChocolateChipCookies.jpg"
-	}else if (chosenWord === 'CobbSalad') {
-		document.getElementById("winimg").src="./assets/images/CobbSalad.jpg"
-	}else if (chosenWord === 'Cornbread') {
-		document.getElementById("winimg").src="./assets/images/Cornbread.jpg"
-	}else if (chosenWord === 'Fajitas') {
-		document.getElementById("winimg").src="./assets/images/Fajitas.jpg"
-	}else if (chosenWord === 'FortuneCookies') {
-		document.getElementById("winimg").src="./assets/images/FortuneCookies.jpg"
-	}else if (chosenWord === 'FrenchFries') {
-		document.getElementById("winimg").src="./assets/images/FrenchFries.jpg"
-	}else if (chosenWord === 'FriedChickenNWaffles') {
-		document.getElementById("winimg").src="./assets/images/FriedChicken&waffles.jpg"
-	}else if (chosenWord === 'GreenChileStew') {
-		document.getElementById("winimg").src="./assets/images/GreenChileStew.jpg"
-	}else if (chosenWord === 'Grits') {
-		document.getElementById("winimg").src="./assets/images/Grits.jpg"
-	}else if (chosenWord === 'HoneyHam') {
-		document.getElementById("winimg").src="./assets/images/HoneyHam.jpg"
-	}else if (chosenWord === 'HotDogs') {
-		document.getElementById("winimg").src="./assets/images/HotDogs.jpg"
-	}else if (chosenWord === 'Jambalaya') {
-		document.getElementById("winimg").src="./assets/images/Jambalaya.jpg"
-	}else if (chosenWord === 'Jerky') {
-		document.getElementById("winimg").src="./assets/images/Jerky.jpg"
-	}else if (chosenWord === 'KeyLimePie') {
-		document.getElementById("winimg").src="./assets/images/KeyLimePie.jpg"
-	}else if (chosenWord === 'LobsterRolls') {
-		document.getElementById("winimg").src="./assets/images/LobsterRolls.jpg"
-	}else if (chosenWord === 'MacaroniNCheese') {
-		document.getElementById("winimg").src="./assets/images/Macaroni&cheese.jpg"
-	}else if (chosenWord === 'MarylandCrabcakes') {
-		document.getElementById("winimg").src="./assets/images/MarylandCrabcakes.jpg"
-	}else if (chosenWord === 'Meatloaf') {
-		document.getElementById("winimg").src="./assets/images/Meatloaf.jpg"
-	}else if (chosenWord === 'Nachos') {
-		document.getElementById("winimg").src="./assets/images/Nachos.jpg"
-	}else if (chosenWord === 'NewEnglandClamChowder') {
-		document.getElementById("winimg").src="./assets/images/NewEnglandClamChowder.jpg"
-	}else if (chosenWord === 'PeanutButterSandwich') {
-		document.getElementById("winimg").src="./assets/images/PeanutButterSandwich.jpg"
-	}else if (chosenWord === 'PhillyCheeseSteak') {
-		document.getElementById("winimg").src="./assets/images/PhillyCheeseSteak.jpg"
-	}else if (chosenWord === 'PoBoy') {
-		document.getElementById("winimg").src="./assets/images/PoBoy.jpg"
-	}else if (chosenWord === 'Popcorn') {
-		document.getElementById("winimg").src="./assets/images/Popcorn.jpg"
-	}else if (chosenWord === 'PotatoChips') {
-		document.getElementById("winimg").src="./assets/images/PotatoChips.jpg"
-	}else if (chosenWord === 'PotRoast') {
-		document.getElementById("winimg").src="./assets/images/PotRoast.jpg"
-	}else if (chosenWord === 'ReubenSandwich') {
-		document.getElementById("winimg").src="./assets/images/ReubenSandwich.jpg"
-	}else if (chosenWord === 'Smores') {
-		document.getElementById("winimg").src="./assets/images/Smores.jpg"
-	}else if (chosenWord === 'SourdoughBread') {
-		document.getElementById("winimg").src="./assets/images/SourdoughBread.jpg"
-	}else if (chosenWord === 'Tatertots') {
-		document.getElementById("winimg").src="./assets/images/TaterTots.jpg"
-	}else if (chosenWord === 'Twinkies') {
-		document.getElementById("winimg").src="./assets/images/Twinkies.jpg"
-	}
-	}
+	graphic();
+}
 
 function winCase (){
 	//Game finishes with '>0' guesses remaining and restarts with new word
@@ -319,7 +232,6 @@ function winCase (){
 		wins++;
 		//Pushes wins and alert to HTML DOM
 		document.getElementById('winsTracker').innerHTML = wins;
-		alert("Press any key to continue!!");
 		//Once the win statement is initiated, chooses a new random word within wordBank array
 		chosenWord = wordBank[Math.floor(Math.random() * wordBank.length)];
 		lowerChosenWord = chosenWord.toLowerCase();
@@ -331,16 +243,14 @@ function winCase (){
 		console.log(lowerChosenWord);
 		//Runs key stroke function to restart game
 		document.onkeyup = function(event) {
-
 				//key press will begin new game
 				var userGuess = event.key;
 				//keystroke adds alert to HTML DOM
 				alert("Press any key to restart!!");
 				//startGame function is initiated
 				startGame();
-
-}
-}
+		}
+	}
 }
 
 function loseCase () {
@@ -352,7 +262,6 @@ function loseCase () {
 		losses++;
 		//Pushes losses and alert to HTML DOM
 		document.getElementById('lossesTracker').innerHTML = losses;
-		alert("Good try, press any key to continue!!");
 		//Once the lose statement is initiated, chooses a new random word within wordBank array
 		chosenWord = wordBank[Math.floor(Math.random() * wordBank.length)];
 		lowerChosenWord = chosenWord.toLowerCase();
@@ -364,29 +273,26 @@ function loseCase () {
 		console.log(lowerChosenWord);
 		//Runs key stroke function to restart game
 		document.onkeyup = function(event) {
-
 				//key press will begin new game
 				var userGuess = event.key;
 				//keystroke adds alert to HTML DOM
-				alert("Press any key to restart!!");
+				alert("Good Try! Press any key to restart!!");
 				//startGame function is initiated
 				startGame();
-}
-}
+		}
+	}
 }
 
 function onKeyEvent() {
 	document.onkeyup = function(event) {
-
 			//userGuess variable will store keycode used
 			var userGuess = event.key;
 					//For loop to go through the alphabet array, based on the key event that is chosen
 					for(var i= 0; i < alphabet.length; i++) {
 							//If the keystroke is equal to the userGuess and is a key within the alphabet array, it will delete the word from the alphabet array
 							if(userGuess === alphabet[i]) {
-									//variable to to hold the spliced alphabet array
+									//variable to hold the spliced alphabet array
 									var alphabetSplice = alphabet.splice(i,1);
-
 									//Looks in lowerChosenWord index for keystroke
 									if (lowerChosenWord.indexOf(userGuess) > -1) {
 											//When the lowerChosenWord has a valid letter that is chosen it will cycle through all the letters within the underscore array word until all are populated
@@ -394,6 +300,7 @@ function onKeyEvent() {
 														if (lowerChosenWord[i] === userGuess) {
 																//Right Counter is increased by 1, tracking correct keystrokes used
 																rightCounter++;
+																console.log(rightCounter)
 																//Updates the underScore array in the HTML DOM with the userGuess-keystroke
 																underScore[i] = userGuess;
 																//Updates HTML DOM removing commas between letters within the underscore array
@@ -401,7 +308,6 @@ function onKeyEvent() {
 																//winCase function goes into effect
 																winCase();
 														}
-
 				  						}
 									//key into the wrongGuess
 									} else {
@@ -414,10 +320,10 @@ function onKeyEvent() {
 											document.getElementById('guessWrongMaximum').innerHTML = guessWrongMaximum;
 											//loseCase function goes into effect
 											loseCase();
-					  		}
+					  			}
+								}
+							}
 	}
-}
-}
 }
 
 function startGame() {
